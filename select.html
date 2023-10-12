@@ -8,15 +8,24 @@
 </head>
 <body>
     <h1>Velg favorittdyr</h1> <br>
-        <select name="dyr" id="dyr">
-        <option value="monkey">Ape</option>
-        <option value="dog">Hund</option>
-        <option value="cat">Katt</option>
-        <option value="cow">Ku</option>
-        <option value="pig">Gris</option>
+    <select name="dyr" id="dyr">
+        <option value="Ape">Ape</option>
+        <option value="Hund">Hund</option>
+        <option value="Katt">Katt</option>
+        <option value="Ku">Ku</option>
+        <option value="Gris">Gris</option>
     </select>
-    <button>Velg</button>
+    <button onclick="inpDyr()">Velg</button>
     <p id="txtUt"></p>
-    
 </body>
+<script>
+    function inpDyr(){
+        let txtUt = document.getElementById("txtUt");
+        let dyr = document.getElementById("dyr").value;
+        txtUt.textContent = "Du valgte " + dyr;
+    };
+
+
+    
+</script>
 </html>
